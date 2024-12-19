@@ -107,8 +107,12 @@ public class CartScreenController {
         if (media != null) {
             cart.removeMedia(media);  // Xóa media khỏi giỏ hàng
             updateTotalCost();  // Cập nhật lại tổng chi phí sau khi xóa
+            
+            // Cập nhật lại TableView với danh sách media mới
+            tblMedia.setItems(cart.getItemsOrdered());  // Đảm bảo TableView được cập nhật
         }
     }
+
 
     // Phương thức xử lý khi người dùng nhấn nút "Play"
     @FXML

@@ -1,6 +1,8 @@
 package hust.soict.dsai.aims.screen;
 
 import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
@@ -52,6 +54,7 @@ public class CartScreen extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             Cart cart = new Cart();  // Khởi tạo Cart
+            cart.addMedia(new DigitalVideoDisc("Inception1", "Sci-Fi", "Christopher Nolan", 120, 20.0f));
             new CartScreen(cart);  // Khởi tạo và hiển thị CartScreen
         });
     }

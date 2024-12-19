@@ -4,7 +4,7 @@ module GUIProject {
     requires java.desktop;
     requires javafx.swing;
     requires javafx.graphics;
-	requires javafx.base;
+    requires javafx.base;
 
     // Mở các package cho javafx.fxml
     opens hust.soict.dsai.aims.screen to javafx.fxml;
@@ -15,4 +15,7 @@ module GUIProject {
 
     opens hust.soict.dsai.javafx to javafx.fxml;
     exports hust.soict.dsai.javafx;
+
+    // Mở package hust.soict.dsai.aims.media cho javafx.base
+    opens hust.soict.dsai.aims.media to javafx.base;
 }
